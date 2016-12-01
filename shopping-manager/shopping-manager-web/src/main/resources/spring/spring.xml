@@ -23,7 +23,12 @@
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	
-	<context:property-placeholder location="classpath:dbconfig/dbconfig.properties" />
+	<!-- <context:property-placeholder location="classpath:dbconfig/dbconfig.properties" /> -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location">
+	           <value>classpath:dbconfig/dbconfig.properties</value>
+	</property>
+	</bean>
 	
 	<!-- 阿里 druid数据库连接池 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">  
@@ -67,14 +72,10 @@
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
 		    <!-- propagation事务传播行为 REQUIRED新建事务 SUPPORTS当前有事务则在本事务中进行，无事务直接查询不新开事务-->
-			<tx:method name="delete*" propagation="REQUIRED" read-only="false" 
-			           rollback-for="java.lang.Exception"/>
-			<tx:method name="insert*" propagation="REQUIRED" read-only="false" 
-			           rollback-for="java.lang.Exception" />
-			<tx:method name="update*" propagation="REQUIRED" read-only="false" 
-			           rollback-for="java.lang.Exception" />
-			<tx:method name="save*" propagation="REQUIRED" read-only="false" 
-			           rollback-for="java.lang.Exception" />
+			<tx:method name="delete*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+			<tx:method name="insert*" propagation="REQUIRED" rollback-for="java.lang.Exception" />
+			<tx:method name="update*" propagation="REQUIRED" rollback-for="java.lang.Exception" />
+			<tx:method name="save*" propagation="REQUIRED" rollback-for="java.lang.Exception" />
             <tx:method name="find*" propagation="SUPPORTS" read-only="true" />
             <tx:method name="select*" propagation="SUPPORTS" read-only="true" />
             <tx:method name="get*" propagation="SUPPORTS" read-only="true" />			           

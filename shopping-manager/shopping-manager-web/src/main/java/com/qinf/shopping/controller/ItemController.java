@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.qinf.shopping.pojo.Item;
 import com.qinf.shopping.service.ItemService;
 
+import common_pojo.EUDataGridResult;
+
 /**
  * @ClassName: ItemController 
  * @Description: TODO
@@ -17,15 +19,23 @@ import com.qinf.shopping.service.ItemService;
  * @version V1.0
  */
 @Controller
+@RequestMapping("/item")
 public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
 	
-	@RequestMapping("/item/{itemId}")
+	@RequestMapping("/{itemId}")
 	@ResponseBody
 	public Item getItemById(@PathVariable Long itemId) {
 		Item tbItem = itemService.getItemById(itemId);
 		return tbItem;
+	}
+	
+	@RequestMapping("/list")
+	@ResponseBody
+	public EUDataGridResult getItemById(Integer page, Integer rows) {
+		EUDataGridResult result = itemService.getItemList(page, rows);
+		return result;
 	}
 }

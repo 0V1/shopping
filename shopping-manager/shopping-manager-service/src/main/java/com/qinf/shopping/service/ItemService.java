@@ -2,6 +2,8 @@ package com.qinf.shopping.service;
 
 import com.qinf.shopping.pojo.Item;
 
+import common_pojo.EUDataGridResult;
+
 /**
  * @ClassName: ItemService 
  * @Description: 商品接口
@@ -16,4 +18,13 @@ public interface ItemService {
 	 * @return Item 
 	 */
 	public Item getItemById(long itemId);
+	
+	/**
+	 * @param page
+	 * @param rows
+	 * @return
+	 */
+	public EUDataGridResult getItemList(int page, int rows);
+	
 }
+

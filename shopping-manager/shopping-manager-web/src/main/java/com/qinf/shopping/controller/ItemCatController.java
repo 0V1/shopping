@@ -16,7 +16,7 @@ import com.qinf.shopping.service.ItemCatService;
 
 /**
  * @ClassName: ItemCatController 
- * @Description: TODO
+ * @Description: 商品
  * @author qinf QQ:908247035
  * @date 2016年12月3日
  * @version V1.0

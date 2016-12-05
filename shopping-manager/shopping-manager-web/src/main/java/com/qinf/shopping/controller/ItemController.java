@@ -34,7 +34,7 @@ public class ItemController {
 	
 	@RequestMapping("/list")
 	@ResponseBody
-	public EUDataGridResult getItemById(Integer page, Integer rows) {
+	public EUDataGridResult getItemByPage(Integer page, Integer rows) {
 		EUDataGridResult result = itemService.getItemList(page, rows);
 		return result;
 	}

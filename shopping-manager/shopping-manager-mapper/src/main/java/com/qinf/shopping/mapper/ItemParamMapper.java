@@ -1,5 +1,7 @@
 package com.qinf.shopping.mapper;
 
+import java.util.List;
+
 import com.qinf.shopping.pojo.ItemParam;
 
 public interface ItemParamMapper {
@@ -16,4 +18,7 @@ public interface ItemParamMapper {
     int updateByPrimaryKeyWithBLOBs(ItemParam record);
 
     int updateByPrimaryKey(ItemParam record);
+
+	List<ItemParam> selectAll();
+
 }

@@ -13,7 +13,7 @@
         
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
             connectionURL="jdbc:mysql://localhost:3306/shopping"
-            userId="zx_root" password="pccw">
+            userId="root" password="pccw">
         </jdbcConnection>
         
         <javaTypeResolver>
@@ -37,12 +37,19 @@
         </javaClientGenerator>
 
 
-         <!-- 这里是数据库的表名table_user 以及 POJO类的名字User -->
-        <table tableName="tb_item" domainObjectName="Item"
-            enableCountByExample="false" enableSelectByExample="false"
-            enableUpdateByExample="false" enableDeleteByExample="false">
-
-        </table>
+        <!-- 这里是数据库的表名table_user 以及 POJO类的名字User -->
+        <table tableName="tb_content" domainObjectName="Content" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_content_category" domainObjectName="ContentCategory" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_item" domainObjectName="Item" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_item_cat" domainObjectName="ItemCat" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_item_desc" domainObjectName="ItemDesc" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_item_param" domainObjectName="ItemParam" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_item_param_item" domainObjectName="ItemParamItem" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_order" domainObjectName="Order" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_order_item" domainObjectName="OrderItem" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_order_shipping" domainObjectName="OrderShipping" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        <table tableName="tb_user" domainObjectName="User" enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/>
+        
     </context>
 
 </generatorConfiguration>

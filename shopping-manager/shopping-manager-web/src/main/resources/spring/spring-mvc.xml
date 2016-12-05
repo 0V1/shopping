@@ -16,30 +16,34 @@
         </property>  
     </bean>  
 	
+	<!-- 1.启用mvc注解 -->
 	<mvc:annotation-driven/>	
 	<mvc:default-servlet-handler/>
 	
+	<!-- 2.启动组件扫描，加载@Controller组件 -->
 	<context:component-scan base-package="com.qinf.shopping.controller" />
 
-	<!-- 对静态资源文件的访问  restful-->    
-	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
-    <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/> 
-
-	 
-	<!-- 配置SpringMVC的视图解析器 -->
+	<!-- 3.配置SpringMVC的视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
-	
-	<!-- 上传拦截，如最大上传值及最小上传值 -->
+
+	<!-- 4.对静态资源文件的访问  restful-->    
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
+    <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/> 
+	 
+	<!-- 5.上传拦截，如最大上传值及最小上传值 -->
 	<bean id="multipartResolver"   class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >   
+        <!-- 设定文件上传的最大值10MB，10*1024*1024 -->
         <property name="maxUploadSize">    
 	       <value>104857600</value>    
-        </property>   
+        </property> 
+        <!-- 设置在文件上传时允许写到内存中的最大值 -->  
         <property name="maxInMemorySize">    
             <value>4096</value>    
         </property>   
+        <!-- 设定编码格式 -->
         <property name="defaultEncoding">    
             <value>utf-8</value>    
         </property> 

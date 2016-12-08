@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   
   	<modelVersion>4.0.0</modelVersion>
@@ -33,6 +34,7 @@
 		<jedis.version>2.7.2</jedis.version>
 		<solrj.version>4.10.3</solrj.version>
 	</properties>
+	
 	<!-- 只定义依赖的版本，并不实际依赖 -->
 	<dependencyManagement>
 		<dependencies>
@@ -218,4 +220,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+  <modules>
+    <module>shopping-portal</module>
+  </modules>
 </project>

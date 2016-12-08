@@ -1,5 +1,8 @@
 package com.qinf.shopping.mapper;
 
+import java.util.List;
+import java.util.Map;
+
 import com.qinf.shopping.pojo.ContentCategory;
 
 public interface ContentCategoryMapper {
@@ -9,7 +12,7 @@ public interface ContentCategoryMapper {
 
     int insertSelective(ContentCategory record);
 
-    ContentCategory selectByPrimaryKey(Long id);
+    List<ContentCategory> selectByPrimaryKey(Map<String, Object> map);
 
     int updateByPrimaryKeySelective(ContentCategory record);
 

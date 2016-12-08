@@ -1,6 +1,7 @@
 package com.qinf.shopping.mapper;
 
 import java.util.List;
+import java.util.Map;
 
 import com.qinf.shopping.pojo.ItemParam;
 
@@ -11,7 +12,7 @@ public interface ItemParamMapper {
 
     int insertSelective(ItemParam record);
 
-    ItemParam selectByPrimaryKey(Long id);
+    ItemParam selectByPrimaryKey(Map<String,Object> map);
 
     int updateByPrimaryKeySelective(ItemParam record);
 

@@ -35,7 +35,7 @@ public class ItemParamController {
 	
 	@RequestMapping(value="/query/itemcatid/{cid}")
 	@ResponseBody
-	private TaotaoResult queryCatalogById(Long cid){
+	private TaotaoResult queryCatalogById(@PathVariable Long cid){
 		ItemParam res = itemParamService.selectItemParamByCId(cid);
 		//如果查询中有结果返回查询结果
 		if (res != null) {

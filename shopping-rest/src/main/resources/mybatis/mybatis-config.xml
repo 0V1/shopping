@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"  
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
@@ -11,4 +12,19 @@
 		</plugin>
 	</plugins>
 	
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"  
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<!-- 配置分页插件 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->        
+        	<property name="dialect" value="mysql"/>
+		</plugin>
+	</plugins>
+	
+>>>>>>> bf005f330c461f7684e15b86f0bb330bccc47e5f
 </configuration>

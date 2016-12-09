@@ -16,6 +16,11 @@
 		<artifactId>shopping-manager-mapper</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	<dependency>
+		<groupId>com.qinf.shopping</groupId>
+		<artifactId>shopping-manager-pojo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
 	<!-- Spring -->
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -51,6 +56,20 @@
     <dependency>
         <groupId>commons-fileupload</groupId>
         <artifactId>commons-fileupload</artifactId>
+    </dependency>
+    <!-- Redis客户端 -->
+	<dependency>
+		<groupId>org.springframework.data</groupId>
+      	<artifactId>spring-data-redis</artifactId>
+    </dependency>
+	<dependency>
+		<groupId>redis.clients</groupId>
+		<artifactId>jedis</artifactId>
+	</dependency>
+	<!-- enchace缓存 -->
+    <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache-core</artifactId>
     </dependency>
   </dependencies>
   

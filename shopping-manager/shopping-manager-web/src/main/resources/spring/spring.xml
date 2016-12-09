@@ -18,8 +18,8 @@
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list> 
-				<!-- 数据库配置文件 -->
-		    	<value>classpath:dbconfig/dbconfig.properties</value>
+				<!-- 数据库+redis配置文件 -->
+		    	<value>classpath:dbconfig/*.properties</value>
 		    	<!-- 文件上传配置文件 -->
 		    	<value>classpath:uploadconfig/uploadconfig.properties</value>
 	    	</list>

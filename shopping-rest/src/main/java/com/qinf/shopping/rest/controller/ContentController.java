@@ -26,7 +26,6 @@ public class ContentController {
 	@Autowired
 	private ContentService contentService;
 	
-	@SuppressWarnings("unchecked")
 	@RequestMapping("/index_ad_url")
 	@ResponseBody
 	public String ShowIndex(){

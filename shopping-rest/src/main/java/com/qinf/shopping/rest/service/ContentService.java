@@ -3,7 +3,7 @@ package com.qinf.shopping.rest.service;
 import java.util.List;
 
 import com.qinf.shopping.pojo.Content;
-import com.qinf.shopping.pojo.Content;
+
 
 /**
  * @ClassName: ContentService

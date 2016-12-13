@@ -35,16 +35,16 @@ public class ContentServiceImpl implements ContentService{
 			List<Content> list = (List<Content>) taotaoResult.getData();
 			List<Map> resultList = new ArrayList<>();
  			//创建一个jsp页码要求的pojo列表
-			for (Content tbContent : list) {
+			for (Content Content : list) {
 				Map map = new HashMap<>();
-				map.put("src", tbContent.getPic());
+				map.put("src", Content.getPic());
 				map.put("height", 240);
 				map.put("width", 670);
-				map.put("srcB", tbContent.getPic2());
+				map.put("srcB", Content.getPic2());
 				map.put("widthB", 550);
 				map.put("heightB", 240);
-				map.put("href", tbContent.getUrl());
-				map.put("alt", tbContent.getSubTitle());
+				map.put("href", Content.getUrl());
+				map.put("alt", Content.getSubTitle());
 				resultList.add(map);
 			}
 			return JsonUtils.objectToJson(resultList);

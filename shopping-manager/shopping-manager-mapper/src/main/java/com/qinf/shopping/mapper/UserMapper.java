@@ -1,5 +1,8 @@
 package com.qinf.shopping.mapper;
 
+import java.util.List;
+import java.util.Map;
+
 import com.qinf.shopping.pojo.User;
 
 public interface UserMapper {
@@ -9,7 +12,7 @@ public interface UserMapper {
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(Long id);
+    List<User> selectByPrimaryKey(Map<String, Object> map);
 
     int updateByPrimaryKeySelective(User record);
 
